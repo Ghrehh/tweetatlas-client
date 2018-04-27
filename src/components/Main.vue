@@ -1,7 +1,7 @@
 <template>
 <div>
   <h1>Search Phrases: {{ searchPhrases }}</h1>
-  <world-map :countryData='locationData'/>
+  <world-map :countryData='locationData' />
   <location-data />
 </div>
 </template>
