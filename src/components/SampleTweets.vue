@@ -1,7 +1,7 @@
 <template>
 <div>
   <ul class='tweets'>
-    <li class='tweet' v-for="tweet in sampleTweets">
+    <li class='tweet' v-for="(tweet, index) in sampleTweets" :key="index">
       <p>{{tweet.data.text}}</p>
     </li>
   </ul>
