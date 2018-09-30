@@ -1,1 +1,1 @@
-export default () => new WebSocket('ws://tweetatlas.herokuapp.com/tweets');
+export default () => new WebSocket('wss://tweetatlas.herokuapp.com/tweets');
