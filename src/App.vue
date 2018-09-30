@@ -10,6 +10,7 @@ import 'normalize.css';
 export default {
   mounted() {
     this.$store.dispatch({ type: 'stream' });
+    this.$store.dispatch({ type: 'timer' });
   },
 };
 </script>

@@ -5,9 +5,18 @@ export default {
     const tweetStream = newTweetStream();
 
     tweetStream.onmessage = (listener) => {
-      context.commit('changeCountryData', {
-        data: JSON.parse(listener.data),
-      });
+      const jsonData = JSON.parse(listener.data);
+
+      context.commit('changeCountryData', { data: jsonData });
+      context.commit('addSampleTweet', { data: jsonData });
+      context.commit('nextSearch', { data: jsonData });
     };
+  },
+  timer(context) {
+    if (context.state.secondsToNextSearch > 0) {
+      context.commit('decrementTimer');
+    }
+
+    setTimeout(() => this.dispatch({ type: 'timer' }), 1000);
   },
 };

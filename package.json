@@ -16,6 +16,7 @@
     "normalize.css": "^7.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue-tweet-embed": "^2.1.2",
     "vue-world-map": "^0.1.1",
     "vuex": "^3.0.1"
   },
